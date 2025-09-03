@@ -1,4 +1,4 @@
-# Hi, I'm <Your Name>
+# Hi, I'm Preethi Anandhakumar
 Welcome to my ICS4U portfolio. I’ll use this site to post my work and reflections.
 
 ## Highlights
@@ -7,7 +7,7 @@ Welcome to my ICS4U portfolio. I’ll use this site to post my work and reflecti
 - 📝 Blog/Reflection: [Reflection #1](./posts/first_reflection.md)
 
 ## About me
-A short intro (interests, goals, tools I’m learning).
+I am a 16 year old female who goes to Port Credit Secondary School. I love to crochet clothes and granny squares. I was on the varsity badminton team last year. I also play the piano and I love dogs. I hope to explore the technology and science fields in highschool so that I can persue it in post-seconday.
 
 ---
 *Update this page by editing `index.md` in your repository.*
