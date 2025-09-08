@@ -2,8 +2,8 @@
 Welcome to my ICS4U portfolio. I’ll use this site to post my work and reflections.
 
 ## Highlights
-- 🔧 Project 1: *(title)* – *(1–2 lines about what it does)*
-- 🧠 Concept I learned: *(short note)*
+- 🔧 Project 1: *ex. Brownie's Internet Safety* – *A website that contains helpful links for people who have been exploited online and a fun interactive Would You Rather Game about internat safety online*
+- 🧠 Concept I learned: *I learned how important it is as a student to learn about the dangers of the internet befoehand and how to prevent myself from being in danger. I hope this website I made helps other students who have been impacted to receive help from important websites I've gathered and categorized.*
 - 📝 Blog/Reflection: [Reflection #1](./posts/first_reflection.md)
 - Reflection 2: [Reflection #2](./posts/first_reflection.md)
 ## About me
