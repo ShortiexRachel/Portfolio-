@@ -1,6 +1,6 @@
 
 # Day 1 Log Entry: Variables & Data Tracking - 
-- I used variables for images I added to my code and for their respective movements and coordinate names. Some variables I have are:
+I used variables for images I added to my code and for their respective movements and coordinate names. Some variables I have are:
 loid - Character image, loidX - Character’s x-coordinate, loidY - Character’s y-coordinate, loidSpeed - Character’s speed
 
 - Arrays (Int [ ]): Arrays are variables that store multiple values. I used arrays to make many enemy characters without using too many variables. I used a variable for an enemy’s x/y coordinate and x/y speeds because it was using the same image and functions but had different numerical values. Originally I did not know that an array only shows when called on. After multiple trials, I fixed this issue.
