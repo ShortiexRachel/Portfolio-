@@ -1,8 +1,42 @@
 # Second Reflection
-What I learned this week:
-(bullets are fine, you may include an image):
-I learned how to make a fully functioning website with Ms. Kim and my friends on Github. We learned how to add links to take website users to another page. We also explored various themes to use for the website.
-- Topic(s): Internet Safety, Digital Citizenship
-- What I struggled with: When changing to a specific theme, it didn't work. The rlstevenson-jekyll-theme was supposed to change our theme to a light/dark brown. This didn't work and instead created more problems in our code.
-- What I’m proud of: I am proud that my group and I made a game using our knowledge of coping links and interactive questions. Before I started this project, I thought that making the game would be one of the hardest parts of the project. Instead, it turned out to be interesting and fun as we completed it in a day.
-- Next steps: I want to try and add pictures on our website that relate to our topic. This would make it visually pleasing and allow the veiwer to become better engaged. Maybe we can try to add short videos as well in future websites.
+Day 1 Log Entry: Variables & Data Tracking - 
+I used variables for images I added to my code and for their respective movements and coordinate names. Some variables I have are:
+loid - Character image, loidX - Character’s x-coordinate, loidY - Character’s y-coordinate, loidSpeed - Character’s speed
+
+Arrays (Int [ ]): Arrays are variables that store multiple values. I used arrays to make many enemy characters without using too many variables. I used a variable for an enemy’s x/y coordinate and x/y speeds because it was using the same image and functions but had different numerical values. Originally I did not know that an array only shows when called on. After multiple trials, I fixed this issue.
+Strings: Strings represent a sequence of characters. I used a String to print the title of the game on the introduction page. Instead of repeatedly writing the title, I called the variable “label” to make a shorter code.
+Int: Int variables are primitive data types that store whole numbers. I used this variable to organize values I will repeatedly use in the game. For example, I initialized my character’s original position to be (500, 300) so that the user can move from this position to wherever they want to. 
+Boolean: Booleans are variables that represent true or false based on their conditions. I used these boolean variables to move the main character when the user presses a key (true) and when the user stops pressing a key (false). These variables help process the singular input and provide a singular output, helping me efficiently finish the movements.
+PImage: This variable is used to generate images. This is very helpful because it is visually appealing to the viewer and helps me fix placements of certain characters. The variable names given to each picture is useful so that I will not have to recall the picture, but only the name of the picture.
+Global Variables: Global variables are variables defined outside of methods. This is extremely useful when a particular variable is used in many methods. I used many global variables such as score and life because they were used in a lot of my methods.
+Local Variables: Local variables are variables given for specific methods to use. A local variable I used was “i” to call values out of arrays. An issue I had with this was that I repeatedly forgot that local variables were only defined within their method. So when I tried to use the same variable in another method, it didn’t work, hence I used return type variables instead or I just created another one.
+
+//Array Example
+enemyX = new int []{20, 170, 300, 350, 200};
+enemyY = new int[]{40, 290, 100, 350, 200};
+enemySpeedX = new int[]{1, 3, 2, 3, 2};
+enemySpeedY = new int[]{3, 1, 2, 4, 2};
+//String Example
+String label = "A Spy On A Mission";
+//Int Example
+int score = 0, loidX = 500, loidY = 300, loidSpeed = 10, screen = 0;
+//Boolean Example
+boolean left = false, right = false, up = false, down = false;
+//PImage Example
+PImage loid, enemy, gems, forest, Level2Element, longwall,
+  greatwall;
+
+  loid = loadImage("loid.png");
+  forest = loadImage("forest.jpg");
+  enemy = loadImage("ninja.png");
+  gems = loadImage("gem.png");
+  longwall = loadImage("GreatWall.png");
+  greatwall = loadImage("Great Wall.png");
+  Level2Element = loadImage("amazon.png");
+//Local Variable Example ("i")
+ for (int i = 0; i < lines.length; i++) {
+      text(lines[i], 20, 30 + i * 20);
+    }
+//Global Variable Example
+int score = 0;
+int life = 10;
