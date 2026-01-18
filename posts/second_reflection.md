@@ -1,4 +1,5 @@
-Day 1 Log Entry: Variables & Data Tracking - 
+
+# Day 1 Log Entry: Variables & Data Tracking - 
 I used variables for images I added to my code and for their respective movements and coordinate names. Some variables I have are:
 loid - Character image, loidX - Character’s x-coordinate, loidY - Character’s y-coordinate, loidSpeed - Character’s speed
 
