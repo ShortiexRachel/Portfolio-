@@ -11,7 +11,7 @@ loid - Character image, loidX - Character’s x-coordinate, loidY - Character’
 - Global Variables: Global variables are variables defined outside of methods. This is extremely useful when a particular variable is used in many methods. I used many global variables such as score and life because they were used in a lot of my methods.
 - Local Variables: Local variables are variables given for specific methods to use. A local variable I used was “i” to call values out of arrays. An issue I had with this was that I repeatedly forgot that local variables were only defined within their method. So when I tried to use the same variable in another method, it didn’t work, hence I used return type variables instead or I just created another one. 
 
-  //Array Example
+  ```//Array Example
 enemyX = new int []{20, 170, 300, 350, 200};
 enemyY = new int[]{40, 290, 100, 350, 200};
 enemySpeedX = new int[]{1, 3, 2, 3, 2};
@@ -39,13 +39,13 @@ PImage loid, enemy, gems, forest, Level2Element, longwall,
     }
 //Global Variable Example
 int score = 0;
-int life = 10;
+int life = 10;```
 
 # Day 2 Log Entry: Selection Structure- 
 
 I used a concept called selection structure in my code to create movement depending on a given input. Selection structures are decision making statements that execute code based on a true or false condition. In my game, I used it in the keyPressed, keyReleased, and draw methods to help my character move based on the user's input. I specifically used if and if-else statements. This is because an if statement only executes a particular block of code while an if-else statement executes an alternate block of code if the input does not meet the first condition.
 
-//if & if-else Examples
+```//if & if-else Examples
 void keyPressed(){
   if(keyCode == LEFT){
     left = true;//Character moves left while key is pressed
@@ -84,25 +84,25 @@ void draw(){
   }else if(down){
     loidY +=loidSpeed;
   }
-}
+}```
 
 My code states if a certain key is pressed/released, its respective variable is true/false. If true, this output goes to my draw function and sets the speed for the specific coordinate. If false, the character does not move. For example, if the left key is pressed, "left" variable is true. In the draw function (in another selection statement), because left is true, the character's speed is subtracted from its x-coordinate. The other movements such as up, right, and down are done using an if-else statement. This is useful when the input doen not match the first condition, the code automatically executes the next condition met. The only drawback to using selection statements is that it requires multiple brackets. Due to this, it was difficult for me to accurately count the brackets for the statements apart from other methods and separate conditions. But after a while I discovered that in processing, when you hover over an open bracket, it shows the location of its closed bracket. This function greatly helps me now as I do not have to individually count the brackets. There are other types of selection statements but these are the most common function I use throughout my code. Using selection structures greatly helps simplify and organize my game. By using these functions, I can set my own organized conditions with minimal lines.
 
 # Day 3 Log Entry: Repetition Structure - 
 I used a for-loop to read each line of my text file. Repetition structures are blocks of code repeatedly executed until the condition becomes false. A for-loop is a type of repetition structure that is ideal when the number of iterations are known. In this loop, I wrote a condition using the variable "i". I initially wrote, "i" is equal to 0, and declared i is lesser than the length (number of lines in the text file). If this condition is true, starting with "i" equal to zero (first line of text file) is printed 20 pixels from the left and (starting initially with a height of 30 pixels) adds 20 pixels under every line above it (so the text will not overlap). Then, "i" is incremented and the process repeats until the last line of code is printed. I used a for-loop to access my text file because this repetition structure allows me to go through every iteration to print each line. An issue I faced was connecting my text file to my original code. I had my file ready, but it was difficult for me to use it in my code. Finally, I looked at how I called on the values of my array and realized that I could try to do the same (calling lines of my file). So, I used the same for-loop structure I used in an array and changed the output values. This was how I was able to fix this issue. In conclusion, repetition structures repeatedly execute blocks of code when a certain condition is met, helping coders efficiently write code without multiple lines.
 
-//Loop Example
+```//Loop Example
 lines = loadStrings("chibiloidfile.txt");//In void setup
 
 for (int i = 0; i < lines.length; i++) {//In void draw 
       text(lines[i], 20, 30 + i * 20);
-    }
+    }```
 
 # Day 4 Log Entry: Arrays & Data Structures-
 
 I used an array to make multiple enemy characters, without using many variables. Arrays are data structures that hold multiple values of one variable. They allow us to organize multiple data values without a lot of variables. In the void setup, I initialized three variables, enemyGemX, enemyGemY, and enemyGemSpeed. I gave multiple values to each variable within this method for the coordinates and speeds of the enemy characters. In a void nextLevel1, I wrote a for loop so the code accesses each value when it runs. In this for-loop I created a variable "i", and wrote the condition, "i" is lesser than the length (number of values) of enemyGemX. If the condition is true, the code generates a picture for this iteration, enemyGemX[i] ([i] is a certain value in the array) coordinate is then added to enemyGemSpeed[i], allowing it to move horizontally. Once this iteration is complete, the variable "i" goes through the loop repeatedly until no values are left in the array. Originally, I wrote the values of the array outside of the setup function which messed up my code. I believed that if I wrote the array in the setup method, the images would show up throughout the game (not at the exact place I wanted them to appear). After a couple of trials and errors, I realized that when you set the array inside of the setup function, the characters will not be visible to the viewer until the values are called on, hence the repetition structure. Overall, arrays are very helpful for me to make multiple characters without multiple pictures/lines of code. They make my code much more efficient and are easily accessible through for-loops.
 
-//Array EnemyGem Positions Initialized
+```//Array EnemyGem Positions Initialized
 void setup() {
   pixelDensity(1);
   size(1000, 600);
@@ -116,7 +116,7 @@ void nextLevel1(){
 for (int i = 0; i< enemyGemX.length; i++) {
     image(enemyGem, enemyGemX[i], enemyGemY[i], 120, 120);
     enemyGemX[i] += enemyGemSpeed[i];
-}
+}```
 
 # Day 5 Log Entry: Custom Functions, Error Checking, And Restrictions - 
 I used custom functions, error checking techniques, and restrictions to enhance my game and its main features. 
@@ -129,7 +129,7 @@ Restrictions are constraints or conditions that limit a code. Restrictions are e
 
 To conclude, using custom methods, checking errors, and applying restrictions helped modify my game, preventing any unnecessary character inputs and issues from interrupting my game sequence.
 
-//Custom Function Example 1
+```//Custom Function Example 1
 void nextLevel2() {
   image(forest, 0, 0, 1000, 600);
   image(loid, loidX, loidY, 120, 120);
@@ -200,7 +200,7 @@ boolean isCollected(int i) {
     loidY = 0;
   } else if (loidY > 600) {
     loidY = 600;//loid's parameter to keep loid within canvas
-  }
+  }```
 
   ## Overall, this was a very fun project to work on. I learned a lot from this course because of Ms. Kim's amazing teaching skills. I hope I can take this course next year with her :)
   
